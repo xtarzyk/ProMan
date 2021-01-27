@@ -1,3 +1,103 @@
-#boards {
+/* #boards {
     background-color: green;
+} */
+body
+/* backround pattern from https://www.toptal.com/designers/subtlepatterns/dark-sharp-edges/*/
+{
+/* background-color: rgb(146, 138, 138); */
+background-image: url("/img/footer_lodyas.png");
+}
+
+.header_title
+{
+    width: 1920px;
+    /* margin: 10px; */
+    background-color: grey;
+    color: white;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container
+{
+    /* width: 1920px; */
+    display: flex;
+    min-height: 800px;
+    background-color: rgb(49, 49, 49);
+    /* margin-left: auto;
+    margin-right: auto; */
+    justify-content: center;
+}
+
+.board1
+{
+    /* height: 500px; */
+    background-color: rgb(110, 126, 110);
+    /* margin-left: auto;
+    margin-right: auto; */
+    font-size: 25px;
+    display: flex;
+    min-height: 300px;
+}
+
+
+.board_item
+{
+width: 300px;
+margin: 10px;
+border: 3px solid black;
+justify-content: space-between;
+display: flex;
+background-color: darkgoldenrod;
+}
+
+.child1
+{
+    /* float: left; */
+    /* width: 400px; */
+    min-height: 300px;
+    /* background-color: rgb(151, 144, 144); */
+    /* border: 2px solid black; */
+
+    /* padding: 10px; */
+}
+
+.child2
+{
+    /* float: left; */
+    /* width: 400px; */
+    min-height: 300px;
+    /* background-color: rgb(158, 39, 39); */
+    /* border: 2px solid black */
+
+    /* padding: 10px; */
+}
+
+.child3
+{
+    /* float: left; */
+    /* width: 400px; */
+    min-height: 300px;
+    /* background-color: rgb(34, 75, 94); */
+    /* border: 2px solid black */
+
+    /* padding: 10px; */
+}
+.child4
+{
+    /* float: left;
+    width: 400px; */
+    min-height: 300px;
+    /* background-color: rgb(111, 230, 200); */
+    /* border: 2px solid black */
+
+    /* padding: 10px; */
+}
+
+
+.footer
+{
+    text-align: center;
+    color: white;
 }
