@@ -8,7 +8,8 @@
 
 body{
     min-width: 620px;
-    background: #ddd url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/diagonal-noise.png);
+    background: rgb(146, 138, 138) url("/static/css/images/footer_lodyas.png");
+    /*background-image: url("../design-materials/footer_lodyas.png");*/
     font-family: sans-serif;
 }
 
@@ -32,7 +33,7 @@ button{
     padding: 4px 10px;
 }
 
-.board-container{
+.board-container, .add-board-container{
     max-width: 960px;
     margin: 0 auto;
 }
@@ -62,11 +63,19 @@ section.board{
 .board-toggle{
     float: right;
     margin: 13px;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .board-toggle:hover {
+  background-color: #ccc;
 }
 
 .board-columns{
-    display: flex;
-    flex-wrap: nowrap;
+    display: none;
+    /*display: flex;
+    flex-wrap: nowrap;*/
+    overflow: hidden;
 }
 
 .board-column{
@@ -126,4 +135,8 @@ section.board{
 
 .card-title{
     padding-right: 16px;
+}
+
+.add-board-button{
+    margin: 20px;
 }
