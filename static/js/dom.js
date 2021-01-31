@@ -42,23 +42,19 @@ export let dom = {
     // here comes more features
 
     accordion: function () {
-        let acc = document.getElementsByClassName("board-toggle");
-        let i;
+        document.querySelectorAll('.board-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                let boardsColumns = button.nextElementSibling;
 
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                /* Toggle between adding and removing the "active" class,
-                   to highlight the button that controls the panel */
-                this.classList.toggle("active");
+                button.classList.toggle('board-toggle--active');
 
-                /* Toggle between hiding and showing the active panel */
-                let panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                    } else {
-                        panel.style.display = "block";
-                    }
-                });
-            }
-    },
+                if (button.classList.contains('board-toggle--active')) {
+                    boardsColumns.style.maxHeight = boardsColumns.scrollHeight + 'px';
+                } else {
+                    boardsColumns.style.maxHeight = 0;
+                }
+            });
+        });
+    }
+
 };

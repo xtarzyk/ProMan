@@ -61,21 +61,32 @@ section.board{
 }
 
 .board-toggle{
+    display: block;
     float: right;
     margin: 13px;
     outline: none;
-    transition: 0.4s;
+    transition: background 0.4s;
+    cursor: pointer;
+}
+
+.board-toggle::after{
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
 }
 
 .active, .board-toggle:hover {
   background-color: #ccc;
 }
 
+.board-toggle--active::after{
+    content: '\25b4';
+}
+
 .board-columns{
-    display: none;
-    /*display: flex;
-    flex-wrap: nowrap;*/
     overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
 }
 
 .board-column{
